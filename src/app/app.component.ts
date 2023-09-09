@@ -6,5 +6,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Hola mundo';
+  public counter: number = 10;
+  public heros : string[] = ['superman', 'spiderman', 'batman', 'thor'];
+  public heroDeleted? : string = '';
+
+  constructor(  ) {
+
+  }
+
+  increaseBy() {
+    this.counter += 1;
+  }
+
+  decreaseBy() {
+    this.counter -= 1;
+  }
+
+  deleteLastHero() {
+    this.heroDeleted = this.heros.pop();
+  }
+
+  onNewCharacter( character : any ): void {
+    this.heros.push(character);
+  }
+
+  getHeros() : string[] {
+    return this.heros;
+  }
 }

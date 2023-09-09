@@ -1,0 +1,11 @@
+<form (ngSubmit)="emitCharacter()">
+    <input type="text" name="name" placeholder="Nombre" [(ngModel)]="character">
+
+    <button type="submit">
+        Agregar
+    </button>
+
+    <span>
+        {{ character | json }}
+    </span>
+</form>

@@ -1,0 +1,17 @@
+<ul>
+    <li *ngFor="
+    let hero of heros; let i = index; 
+    let isLast = last; 
+    let isFirst = first;
+    let isEven = even; 
+    let isOdd = odd;"
+    [ngClass]="{
+        'even' : isEven,
+        'odd'  : isOdd,
+        'first': isFirst,
+        'last' : isLast
+    }"
+    >
+      {{ i }} {{ hero }}
+    </li>
+</ul>
